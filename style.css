@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  font-size: 18px;
+}
+
+#intro-page {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./img/bg.webp");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 3rem;
+  position: relative;
+}
+
+#intro-page i {
+  display: none;
+  cursor: pointer;
+}
+
+#menu {
+  width: 85vw;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#menu img {
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  object-fit: cover;
+}
+
+#menu-list {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+#menu-list a {
+  text-decoration: none;
+  color: white;
+}
+
+#menu-list a:hover {
+  text-decoration: underline;
+}
+
+#intro-text-content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: auto;
+  text-align: center;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#intro-text-content h1 {
+  font-size: 2.5rem;
+  margin-top: 5rem;
+}
+#intro-text-content p {
+  font-weight: 300;
+}
+
+#intro-text-content button,
+#banner-content button {
+  outline: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}
+
+#lessons-options,
+#office-location,
+#other-location,
+#comments-mycompany,
+#about-us {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 3rem 2rem;
+  min-width: 992px;
+}
+
+#lessons-content,
+#office-content,
+#other-office-content,
+#comments-content {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: bisque;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+}
+.card:hover {
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.card p {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.img-card {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.img-card img {
+  width: 100%;
+  height: 100%;
+
+  min-width: 220px;
+  border-radius: 5px;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+}
+
+.img-card::after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  left: 0px;
+  top: 100%;
+  z-index: 1;
+  transition: top 0.2s ease-in-out;
+  background-color: rgba(200, 52, 15, 0.5);
+  border-radius: 5px;
+}
+
+.img-card:nth-child(1)::after {
+  content: "London";
+}
+.img-card:nth-child(2)::after {
+  content: "İstanbul";
+}
+.img-card:nth-child(3)::after {
+  content: "Oslo";
+}
+.img-card:hover::after {
+  top: 0;
+}
+
+#other-location p {
+  text-align: center;
+}
+#other-office-content > .card {
+  background-color: transparent;
+}
+
+#other-office-content > .card:hover {
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+#other-office-content > .card > img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+#other-office-content > .card > h3 {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+#other-office-content > .card > p {
+  text-align: justify;
+}
+
+#comments-content .card {
+  flex-direction: row;
+  gap: 1rem;
+}
+
+#comments-content .card img {
+  width: 70px;
+  border-radius: 100%;
+  margin-bottom: auto;
+}
+
+.comment-user {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: justify;
+}
+
+.comment-user span {
+  font-weight: bold;
+}
+
+#about-us {
+  gap: 2rem !important;
+}
+
+#banner-box {
+  width: 100%;
+  position: relative;
+}
+
+.banner-img-content {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-img-content img {
+  width: 100%;
+  max-height: 500px;
+  min-height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+#banner-content {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  padding: 0rem 1rem;
+  text-align: center;
+  color: white;
+  gap: 2rem;
+}
+
+#aboutus-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+#social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+#social-icons i {
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1010px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+
+  #menu img {
+    max-width: 150px;
+  }
+
+  #lessons-content,
+  #office-content,
+  #other-office-content,
+  #comments-content {
+    flex-direction: column;
+  }
+
+  #lessons-options,
+  #office-location,
+  #other-location,
+  #comments-mycompany,
+  #about-us {
+    width: 100%;
+    min-width: 300px;
+    padding: 2rem;
+  }
+
+  .img-card img {
+    max-height: 500px;
+    min-height: 300px;
+  }
+  #intro-text-content h1 {
+    font-size: 2rem;
+  }
+
+  #menu-list {
+    display: none;
+  }
+  #intro-page i {
+    display: block;
+    font-size: 2rem;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+}
